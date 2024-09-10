@@ -3,13 +3,26 @@
 
 //components
 import Logo from "./Logo";
+import MobileNav from "./MobileNav";
+import Nav from "./Nav";
 import ThemeToggler from "./ThemeToggler";
 
 const Header = () => {
   return (
     <header>
       <div className="container mx-auto"></div>
-      <ThemeToggler />
+      <div className="flex justify-between items-center">
+        <Logo />
+        <div>
+          {/* nav */}
+          <Nav />
+          <ThemeToggler />
+          {/* mobile nav */}
+          <div className="">
+            <MobileNav />
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
