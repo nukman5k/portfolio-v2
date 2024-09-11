@@ -13,12 +13,12 @@ const Header = () => {
       <div className="container mx-auto"></div>
       <div className="flex justify-between items-center">
         <Logo />
-        <div>
+        <div className="flex items-center gap-x-6">
           {/* nav */}
-          <Nav />
+          <Nav containerStyles="hidden xl-flex gap-x-8 items-center" />
           <ThemeToggler />
           {/* mobile nav */}
-          <div className="">
+          <div className="xl:hidden">
             <MobileNav />
           </div>
         </div>
