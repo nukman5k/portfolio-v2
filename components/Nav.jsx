@@ -7,17 +7,21 @@ import { usePathname } from "next/navigation";
 
 const links = [
   {
-    name: "home",
     path: "/",
+    name: "home"
   },
   {
-    name: "my projects",
     path: "/projects",
+    name: "my projects"
   },
   {
-    name: "contact",
-    path: "/contact"
+    path: "/contact",
+    name: "contact"
   },
+  {
+    path: "/about",
+    name: "about"
+  }
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
@@ -25,6 +29,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
 
   return (
     <nav className={`${containerStyles}`}>
+
       {links.map((link, index) => {
         return (
           <Link key={index} href={link.path} className={`capitalize ${linkStyles}`}>
