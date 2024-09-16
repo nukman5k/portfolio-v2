@@ -15,7 +15,7 @@ const ThemeToggler = () => {
         setMounted(true);
     }, []);
 
-    //suggestion
+    //suggestion [IT WORKED]
     useEffect(() => {
         // Update the theme when the theme state changes
         document.body.classList.toggle("dark", theme === "dark");
