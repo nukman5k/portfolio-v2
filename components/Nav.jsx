@@ -33,6 +33,10 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
       {links.map((link, index) => {
         return (
           <Link key={index} href={link.path} className={`capitalize ${linkStyles}`}>
+            {/* {link.path === pathname && <span className={`${underlineStyles}`} />} */}
+            {link.path === path && (
+              <motion.span ini />
+            )}
             {link.name}
           </Link>
         )
