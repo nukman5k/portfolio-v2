@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 
@@ -8,20 +8,20 @@ import { usePathname } from "next/navigation";
 const links = [
   {
     path: "/",
-    name: "home"
+    name: "home",
   },
   {
     path: "/projects",
-    name: "my projects"
+    name: "my projects",
   },
   {
     path: "/contact",
-    name: "contact"
+    name: "contact",
   },
   {
     path: "/about",
-    name: "about"
-  }
+    name: "about",
+  },
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
@@ -29,20 +29,21 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
 
   return (
     <nav className={`${containerStyles}`}>
-
       {links.map((link, index) => {
         return (
-          <Link key={index} href={link.path} className={`capitalize ${linkStyles}`}>
+          <Link
+            key={index}
+            href={link.path}
+            className={`capitalize ${linkStyles}`}
+          >
             {/* {link.path === pathname && <span className={`${underlineStyles}`} />} */}
-            {link.path === path && (
-              <motion.span ini />
-            )}
+            {link.path === path && <motion.span initial={{ y: "-100%" }} />}
             {link.name}
           </Link>
-        )
+        );
       })}
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
