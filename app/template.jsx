@@ -8,10 +8,10 @@ import useScrollProgress from "@/hooks/useScrollProgress";
 //variants
 const variants = {
   hidden: {
-    opacity: 0,
+    opacity: 0
   },
   enter: {
-    opacity: 1,
+    opacity: 1
   },
 };
 
@@ -23,17 +23,17 @@ const Template = ({ children }) => {
       <motion.main
         variants={variants}
         initial="hidden"
-        animate={completion ? "enter" : "hidden"}
+        // animate={completion ? "enter" : "hidden"}
+        animate="enter"
         transition={{ type: "linear", delay: 0.2, duration: 0.4 }}
       >
         {children}
       </motion.main>
       {/* completion bar */}
-      <span
-        sytle={{ transform: `translateY(${completion - 100}%)` }}
+      <span style={{ transform: `translateY(${completion - 100}%)` }}
         className="fixed
-        z50
-        big-primary-bg
+        z-50
+        bg-primary
         w-1
         top-0
         right-0
@@ -41,7 +41,7 @@ const Template = ({ children }) => {
         transition-all
         duration-700"
       ></span>
-      <div className="h-[4000px]"></div>
+      <div className="h-[3000px]"></div>
     </>
   );
 };

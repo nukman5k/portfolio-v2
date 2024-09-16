@@ -1,9 +1,11 @@
 import React from 'react'
 
-const page = () => {
+const Projects = () => {
   return (
-    <div>page</div>
+    <div>Projects Page
+     
+    </div>
   )
 }
 
-export default page
+export default Projects;
