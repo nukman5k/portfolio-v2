@@ -15,7 +15,10 @@ const Header = () => {
           <Logo />
           <div className="flex items-center gap-x-6">
             {/* nav */}
-            <Nav containerStyles="hidden lg:flex xl:flex gap-x-8 items-center" linkStyles='relative hover:'/>
+            <Nav containerStyles="hidden lg:flex xl:flex gap-x-8 items-center" linkStyles='relative hover:text-primary transition-all'
+              underlineStyles='absolute left-0 top-full h-[2px] bg-primary w-full' />
+            {/* theme toggler */}
+            
             <ThemeToggler />
             {/* mobile nav */}
             <div className="lg:hidden xl:hidden">
