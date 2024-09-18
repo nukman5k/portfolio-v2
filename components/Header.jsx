@@ -15,7 +15,7 @@ const Header = () => {
           <Logo />
           <div className="flex items-center gap-x-6">
             {/* nav */}
-            <Nav containerStyles="hidden lg:flex xl:flex gap-x-8 items-center" />
+            <Nav containerStyles="hidden lg:flex xl:flex gap-x-8 items-center" linkStyles='relative hover:'/>
             <ThemeToggler />
             {/* mobile nav */}
             <div className="lg:hidden xl:hidden">
