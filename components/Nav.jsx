@@ -21,10 +21,6 @@ const links = [
     path: "/contact",
     name: "contact",
   },
-  {
-    path: "/about",
-    name: "about",
-  },
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
@@ -39,10 +35,15 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
             href={link.path}
             className={`capitalize ${linkStyles}`}
           >
-            {link.path === path && (<motion.span initial={{ y: "-100%" }} animate={{y:0}}
-              transition={{type:'tween'}} layoutId='underline' className={`${underlineStyles}`}
-            />
-        )}
+            {link.path === path && (
+              <motion.span
+                initial={{ y: "-100%" }}
+                animate={{ y: 0 }}
+                transition={{ type: "tween" }}
+                layoutId="underline"
+                className={`${underlineStyles}`}
+              />
+            )}
             {link.name}
           </Link>
         );
@@ -50,5 +51,5 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
     </nav>
   );
 };
-
+// update
 export default Nav;

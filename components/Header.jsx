@@ -12,12 +12,14 @@ import { SheetHeader } from "./ui/sheet";
 const Header = () => {
   const [header, setHeader] = useState(false);
   const pathname = usePathname();
-  console.log(pathname);
 
   useEffect(() => {
     const scrollYPos = window.addEventListener("scroll", () => {
       window.scrollY > 50 ? setHeader(true) : setHeader(false);
     });
+
+    //AI code
+    // window.addEventListener("scroll", scrollYPos);
 
     //remove event
     return () => window.removeEventListener("scroll", scrollYPos);
@@ -29,7 +31,9 @@ const Header = () => {
         header
           ? "py-4 bg-white shadow-lg dark:bg-accent"
           : "py-6 dark:bg-transparent"
-      } sticky top-0 z-30 transition-all ${pathname === "/" && "bg-[#fef9f5]"}`}
+      } sticky top-0 z-30 transition-all ${
+        pathname === "/" ? "bg-[#fef9f5]" : ""
+      }`}
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
